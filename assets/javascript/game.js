@@ -7,6 +7,8 @@ $(document).ready(function() {
     let losses = 0;
     let counter = 0;
 
+    $(`#wins`).html(wins);
+    $(`#losses`).html(losses);   
 
     // FUNCTIONS
     // ==================================================================================
@@ -14,11 +16,27 @@ $(document).ready(function() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-
-    function newGame() {
+    let currentRandom = randomNumber(19, 120);
+    $(`#random-number`).html(currentRandom);
+    
+    
+    
+    
+    function gameReset() {
         let currentRandom = randomNumber(19, 120);
         $(`#random-number`).html(currentRandom);
-        
+        counter = 0;
+        $(`#current-total`).html(counter);
+        let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        gemValues.splice(gemValues.indexOf(rubyValue), 1);
+        let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        gemValues.splice(gemValues.indexOf(diamondValue), 1);
+        let sapphireValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        gemValues.splice(gemValues.indexOf(sapphireValue), 1);
+        let emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+    }
+
+    function gameplay() {
         let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
         gemValues.splice(gemValues.indexOf(rubyValue), 1);
         let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
@@ -27,47 +45,79 @@ $(document).ready(function() {
         gemValues.splice(gemValues.indexOf(sapphireValue), 1);
         let emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
 
-        console.log(rubyValue);
-        console.log(diamondValue);
-        console.log(sapphireValue);
-        console.log(emeraldValue);
-
         $(`#ruby-click`).on(`click`, function() {
             counter += rubyValue;
             $(`#current-total`).html(counter);
-
+            console.log(counter);
+            if(counter > currentRandom) {
+                alert(`You lose!`);
+                losses++;
+                $(`#losses`).html(losses);
+                gameReset();
+            } else if 
+            (counter === currentRandom && counter >= 19) {
+                alert(`You win!`)
+                wins++;
+                $(`#wins`).html(wins);
+                gameReset();
+            }
+            
         })
         $(`#diamond-click`).on(`click`, function() {
             counter += diamondValue;
             $(`#current-total`).html(counter);
+            console.log(counter);
+            if(counter > currentRandom) {
+                alert(`You lose!`);
+                losses++;
+                $(`#losses`).html(losses);
+                gameReset();
+            } else if 
+                (counter === currentRandom && counter >= 19) {
+                    alert(`You win!`)
+                    wins++;
+                    $(`#wins`).html(wins);
+                    gameReset();
+                }
         })
         $(`#sapphire-click`).on(`click`, function() {
             counter += sapphireValue;
             $(`#current-total`).html(counter);
+            console.log(counter);
+            if(counter > currentRandom) {
+                alert(`You lose!`);
+                losses++;
+                $(`#losses`).html(losses);
+                gameReset();
+            } else if 
+                (counter === currentRandom && counter >= 19) {
+                    alert(`You win!`)
+                    wins++;
+                    $(`#wins`).html(wins);
+                    gameReset();
+                }
         })
         $(`#emerald-click`).on(`click`, function() {
             counter += emeraldValue;
             $(`#current-total`).html(counter);
+            console.log(counter);
+            if(counter > currentRandom) {
+                alert(`You lose!`);
+                losses++;
+                $(`#losses`).html(losses);
+                gameReset();
+            } else if 
+                (counter === currentRandom && counter >= 19) {
+                    alert(`You win!`)
+                    wins++;
+                    $(`#wins`).html(wins);
+                    gameReset();
+                }
         })
-
-
     }
 
-    newGame();
-    $(`#wins`).html(wins);
-    $(`#losses`).html(losses);
-
-
-
-
-
-
-
-
-
-
-
-
+    gameplay();
+    
 
 
 
@@ -75,3 +125,6 @@ $(document).ready(function() {
 
 
 });
+
+
+// Not resetting crystal values
