@@ -6,10 +6,10 @@ body {
     font-family: 'Merienda', cursive;
 }
 
-/* #scroll {
+#scroll {
     width: 50%;
     float: left;
-} */
+}
 
 .imgContainer {
     position: relative;

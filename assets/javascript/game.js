@@ -9,6 +9,14 @@ $(document).ready(function() {
 
     $(`#wins`).html(wins);
     $(`#losses`).html(losses);   
+    
+    let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+    gemValues.splice(gemValues.indexOf(rubyValue), 1);
+    let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+    gemValues.splice(gemValues.indexOf(diamondValue), 1);
+    let sapphireValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+    gemValues.splice(gemValues.indexOf(sapphireValue), 1);
+    let emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
 
     // FUNCTIONS
     // ==================================================================================
@@ -23,27 +31,20 @@ $(document).ready(function() {
     
     
     function gameReset() {
-        let currentRandom = randomNumber(19, 120);
+        currentRandom = randomNumber(19, 120);
         $(`#random-number`).html(currentRandom);
         counter = 0;
         $(`#current-total`).html(counter);
-        let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
         gemValues.splice(gemValues.indexOf(rubyValue), 1);
-        let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
         gemValues.splice(gemValues.indexOf(diamondValue), 1);
-        let sapphireValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        sapphireValue = gemValues[Math.floor(Math.random() * gemValues.length)];
         gemValues.splice(gemValues.indexOf(sapphireValue), 1);
-        let emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+        emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
     }
 
-    function gameplay() {
-        let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
-        gemValues.splice(gemValues.indexOf(rubyValue), 1);
-        let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
-        gemValues.splice(gemValues.indexOf(diamondValue), 1);
-        let sapphireValue = gemValues[Math.floor(Math.random() * gemValues.length)];
-        gemValues.splice(gemValues.indexOf(sapphireValue), 1);
-        let emeraldValue = gemValues[Math.floor(Math.random() * gemValues.length)];
+
 
         $(`#ruby-click`).on(`click`, function() {
             counter += rubyValue;
@@ -114,15 +115,7 @@ $(document).ready(function() {
                     gameReset();
                 }
         })
-    }
-
-    gameplay();
     
-
-
-
-
-
 
 });
 
