@@ -1,3 +1,7 @@
+.background-image {
+    background-image: url(../images/pexels-photo-952670.jpeg);
+}
+
 img {
     width: 20%;
 }
@@ -7,8 +11,7 @@ body {
 }
 
 #scroll {
-    width: 60%;
-    float: left;
+    width: 100%;
 }
 
 .imgContainer {
