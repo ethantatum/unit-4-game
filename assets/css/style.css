@@ -7,18 +7,10 @@ body {
 }
 
 #scroll {
-    width: 50%;
+    width: 60%;
     float: left;
 }
 
 .imgContainer {
     position: relative;
-}
-
-#pContainer {
-    position: absolute;
-    top: 40%;
-    left: 41%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
 }
