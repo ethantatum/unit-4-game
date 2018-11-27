@@ -49,7 +49,6 @@ $(document).ready(function() {
         $(`#ruby-click`).on(`click`, function() {
             counter += rubyValue;
             $(`#current-total`).html(counter);
-            console.log(counter);
             if(counter > currentRandom) {
                 alert(`You lose!`);
                 losses++;
@@ -67,7 +66,6 @@ $(document).ready(function() {
         $(`#diamond-click`).on(`click`, function() {
             counter += diamondValue;
             $(`#current-total`).html(counter);
-            console.log(counter);
             if(counter > currentRandom) {
                 alert(`You lose!`);
                 losses++;
@@ -84,7 +82,6 @@ $(document).ready(function() {
         $(`#sapphire-click`).on(`click`, function() {
             counter += sapphireValue;
             $(`#current-total`).html(counter);
-            console.log(counter);
             if(counter > currentRandom) {
                 alert(`You lose!`);
                 losses++;
@@ -101,7 +98,6 @@ $(document).ready(function() {
         $(`#emerald-click`).on(`click`, function() {
             counter += emeraldValue;
             $(`#current-total`).html(counter);
-            console.log(counter);
             if(counter > currentRandom) {
                 alert(`You lose!`);
                 losses++;
@@ -116,8 +112,4 @@ $(document).ready(function() {
                 }
         })
     
-
 });
-
-
-// Not resetting crystal values
