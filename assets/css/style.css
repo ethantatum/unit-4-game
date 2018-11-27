@@ -3,11 +3,18 @@
 }
 
 img {
-    width: 11%;
+    width: 12%;
+}
+
+.gem-click:hover {
+    opacity: 0.85;
+    cursor: pointer;
 }
 
 body {
     font-family: 'Merienda', cursive;
+    color: gold;
+    text-shadow: 0 0 13px red;
 }
 
 #scroll {

@@ -13,37 +13,40 @@
     <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico"/>
 </head>
 <body class="background-image">
-    <header class="container-fluid text-danger sticky-top">
+    <header class="container-fluid sticky-top">
         
-        <h1 class="h1 pt-2 text-center font-weight-bold">Conjure the Crystals <span class="fas fa-hat-wizard text-danger"></span></h1>
+        <h1 class="h1 pt-2 text-center font-weight-bold">Conjure the Crystals <span class="fas fa-hat-wizard"></span></h1>
         
     </header>
 
-    <section class="container-fluid p-0">
+    <section class="container-fluid p-1">
         <div class="row m-0">
-            <div class="col-7 border border-secondary">
+            <div class="col-7">
                 <img id="scroll" src="assets/images/scroll directions.png" alt="scroll"/>
             </div>
-            <div class="col-5 border border-secondary text-danger text-center">           
+            <div class="col-5 text-center pt-2">           
                 <h1>Random Number: <span id="random-number"></span></h1>
                 <h2>Wins: <span id="wins"></span></h2>
                 <h2>Losses: <span id="losses"></span></h2>
                 </br>
                 <h1>Thy current total is: </h1>
                 <h1 id="current-total"></h1>
+                <h1 id="win-loss"></h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 mx-5">
-                <img class="img-fluid pr-5 gem-click" id="ruby-click" src="assets/images/ruby.png" alt="ruby">
-                <img class="img-fluid pr-5 gem-click" id="diamond-click" src="assets/images/diamond.png" alt="diamond">
-                <img class="img-fluid pr-5 gem-click" id="sapphire-click" src="assets/images/sapphire.png" alt="sapphire">
-                <img class="img-fluid pr-5 gem-click" id="emerald-click" src="assets/images/emerald.png" alt="emerald">
+            <div class="col-4"></div>
+            <div class="col-7 mx-5 pt-1">
+                <img class="img-fluid gem-click" id="ruby-click" src="assets/images/ruby.png" alt="ruby">
+                <img class="img-fluid gem-click" id="diamond-click" src="assets/images/diamond.png" alt="diamond">
+                <img class="img-fluid gem-click" id="sapphire-click" src="assets/images/sapphire.png" alt="sapphire">
+                <img class="img-fluid gem-click" id="emerald-click" src="assets/images/emerald.png" alt="emerald">
             </div>
+            <div class="col-1"></div>
         </div>
     </section>
     <div class="container-fluid fixed-bottom px-0">
-        <footer class="footer bg-dark text-danger">
+        <footer class="footer bg-dark">
             <div class="text-center pt-2">
                 <span>&copy; 2018 Ethan Tatum</span>
             </div>

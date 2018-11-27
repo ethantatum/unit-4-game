@@ -47,16 +47,17 @@ $(document).ready(function() {
 
 
         $(`#ruby-click`).on(`click`, function() {
+            $(`#win-loss`).html(``);
             counter += rubyValue;
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
-                alert(`You lose!`);
+                $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
             } else if 
             (counter === currentRandom && counter >= 19) {
-                alert(`You win!`)
+                $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                 wins++;
                 $(`#wins`).html(wins);
                 gameReset();
@@ -64,48 +65,51 @@ $(document).ready(function() {
             
         })
         $(`#diamond-click`).on(`click`, function() {
+            $(`#win-loss`).html(``);
             counter += diamondValue;
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
-                alert(`You lose!`);
+                $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
             } else if 
                 (counter === currentRandom && counter >= 19) {
-                    alert(`You win!`)
+                    $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
                     $(`#wins`).html(wins);
                     gameReset();
                 }
         })
         $(`#sapphire-click`).on(`click`, function() {
+            $(`#win-loss`).html(``);
             counter += sapphireValue;
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
-                alert(`You lose!`);
+                $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
             } else if 
                 (counter === currentRandom && counter >= 19) {
-                    alert(`You win!`)
+                    $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
                     $(`#wins`).html(wins);
                     gameReset();
                 }
         })
         $(`#emerald-click`).on(`click`, function() {
+            $(`#win-loss`).html(``);
             counter += emeraldValue;
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
-                alert(`You lose!`);
+                $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
             } else if 
                 (counter === currentRandom && counter >= 19) {
-                    alert(`You win!`)
+                    $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
                     $(`#wins`).html(wins);
                     gameReset();
