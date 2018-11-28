@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // VARIABLES
     // ==================================================================================
-    const gemValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    let gemValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
     
     let wins = 0;
     let losses = 0;
@@ -35,6 +35,7 @@ $(document).ready(function() {
         $(`#random-number`).html(currentRandom);
         counter = 0;
         $(`#current-total`).html(counter);
+        gemValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
         gemValues.splice(gemValues.indexOf(rubyValue), 1);
         diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
@@ -49,6 +50,7 @@ $(document).ready(function() {
         $(`#ruby-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += rubyValue;
+            console.log(rubyValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -67,6 +69,7 @@ $(document).ready(function() {
         $(`#diamond-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += diamondValue;
+            console.log(diamondValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -84,6 +87,7 @@ $(document).ready(function() {
         $(`#sapphire-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += sapphireValue;
+            console.log(sapphireValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -101,6 +105,7 @@ $(document).ready(function() {
         $(`#emerald-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += emeraldValue;
+            console.log(emeraldValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
