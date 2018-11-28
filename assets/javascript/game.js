@@ -50,7 +50,6 @@ $(document).ready(function() {
         $(`#ruby-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += rubyValue;
-            console.log(rubyValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -69,7 +68,6 @@ $(document).ready(function() {
         $(`#diamond-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += diamondValue;
-            console.log(diamondValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -87,7 +85,6 @@ $(document).ready(function() {
         $(`#sapphire-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += sapphireValue;
-            console.log(sapphireValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
@@ -105,7 +102,6 @@ $(document).ready(function() {
         $(`#emerald-click`).on(`click`, function() {
             $(`#win-loss`).html(``);
             counter += emeraldValue;
-            console.log(emeraldValue);
             $(`#current-total`).html(counter);
             if(counter > currentRandom) {
                 $(`#win-loss`).html(`Thou lost! Choose a crystal to try again...`);
