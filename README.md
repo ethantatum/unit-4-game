@@ -1,6 +1,6 @@
-# unit-4-game
+# Conjure the Crystals
 
-## Conjure the Crystals Game
+[Click here to play the game!](https://ethantatum.github.io/unit-4-game/ "Conjure the Crystals")
 
 ### Welcome to my crystal collector game! I completed this game as an assigned homework project during my coding bootcamp.
 ### It makes use of JavaScript and jQuery to provide a random target number, and random number values assigned to four crystals.
