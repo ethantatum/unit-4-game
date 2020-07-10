@@ -2,14 +2,14 @@ $(document).ready(function() {
     // VARIABLES
     // ==================================================================================
     let gemValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    
+
     let wins = 0;
     let losses = 0;
     let counter = 0;
 
     $(`#wins`).html(wins);
-    $(`#losses`).html(losses);   
-    
+    $(`#losses`).html(losses);
+
     let rubyValue = gemValues[Math.floor(Math.random() * gemValues.length)];
     gemValues.splice(gemValues.indexOf(rubyValue), 1);
     let diamondValue = gemValues[Math.floor(Math.random() * gemValues.length)];
@@ -20,17 +20,17 @@ $(document).ready(function() {
 
     // FUNCTIONS
     // ==================================================================================
-    function randomNumber(min, max) {
+     randomNumber = (min, max) =>{
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    
+    };
+
     let currentRandom = randomNumber(19, 120);
     $(`#random-number`).html(currentRandom);
-    
-    
-    
-    
-    function gameReset() {
+
+
+
+
+    gameReset = () => {
         currentRandom = randomNumber(19, 120);
         $(`#random-number`).html(currentRandom);
         counter = 0;
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
 
 
-        $(`#ruby-click`).on(`click`, function() {
+        $(`#ruby-click`).on(`click`, () => {
             $(`#win-loss`).html(``);
             counter += rubyValue;
             $(`#current-total`).html(counter);
@@ -56,16 +56,16 @@ $(document).ready(function() {
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
-            } else if 
+            } else if
             (counter === currentRandom && counter >= 19) {
                 $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                 wins++;
                 $(`#wins`).html(wins);
                 gameReset();
             }
-            
+
         })
-        $(`#diamond-click`).on(`click`, function() {
+        $(`#diamond-click`).on(`click`, () => {
             $(`#win-loss`).html(``);
             counter += diamondValue;
             $(`#current-total`).html(counter);
@@ -74,7 +74,7 @@ $(document).ready(function() {
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
-            } else if 
+            } else if
                 (counter === currentRandom && counter >= 19) {
                     $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
@@ -82,7 +82,7 @@ $(document).ready(function() {
                     gameReset();
                 }
         })
-        $(`#sapphire-click`).on(`click`, function() {
+        $(`#sapphire-click`).on(`click`, () => {
             $(`#win-loss`).html(``);
             counter += sapphireValue;
             $(`#current-total`).html(counter);
@@ -91,7 +91,7 @@ $(document).ready(function() {
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
-            } else if 
+            } else if
                 (counter === currentRandom && counter >= 19) {
                     $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
@@ -99,7 +99,7 @@ $(document).ready(function() {
                     gameReset();
                 }
         })
-        $(`#emerald-click`).on(`click`, function() {
+        $(`#emerald-click`).on(`click`, () => {
             $(`#win-loss`).html(``);
             counter += emeraldValue;
             $(`#current-total`).html(counter);
@@ -108,7 +108,7 @@ $(document).ready(function() {
                 losses++;
                 $(`#losses`).html(losses);
                 gameReset();
-            } else if 
+            } else if
                 (counter === currentRandom && counter >= 19) {
                     $(`#win-loss`).html(`Thou won! Choose a crystal to see if thy fortune holds...`);
                     wins++;
@@ -116,5 +116,5 @@ $(document).ready(function() {
                     gameReset();
                 }
         })
-    
+
 });
